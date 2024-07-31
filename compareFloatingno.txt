@@ -1,0 +1,32 @@
+//Write a Java program that reads two floating-point numbers and 
+//tests whether they are the same up to three decimal places.
+
+import java.util.Scanner;
+
+public class compareFloatingno {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Enter 1st number");
+        double first=sc.nextDouble();
+        System.out.println("Enter 2nd number");
+        double second=sc.nextDouble();
+        sc.close();
+
+        /*first=Math.round(first*1000);
+        first=first/1000;
+
+        second=Math.round(second*1000);
+        second=second/1000;*/
+
+        int firstint=(int)(first*1000);
+        int secondint=(int)(second*1000);
+
+        if(firstint==secondint){
+            System.out.println("They are same");
+        }
+        else{
+            System.out.println("They are different");
+        }
+        
+    }    
+}

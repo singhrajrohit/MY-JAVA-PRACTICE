@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class dayname {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in );
+        System.out.println("Kindly Input the number of the day:");
+        int day=sc.nextInt();
+        sc.close();
+        dayname d=new dayname();
+        System.out.println("Day is :" +(d.getDayName(day)));
+
+        
+    }
+
+    public String getDayName(int day){
+        String DayName=new String();
+
+        switch (day) {
+            case 1: {
+                DayName="Monday";
+                break;
+            }
+            case 2: {
+                DayName="Tuesday";
+                break;
+            }
+            case 3:{
+                DayName="Wednesday";
+                break;
+            }
+            case 4:{
+                DayName="Thurusday";
+                break;
+            }
+            case 5:{
+                DayName="Friday";
+                break;
+            }
+            case 6:{
+                DayName="Saturday";
+                break;
+            }
+            case 7:{
+                DayName="Sunday";
+                break;
+            }
+            default: DayName="Invalid day range"; break;
+        }
+        return DayName;
+    }
+}
