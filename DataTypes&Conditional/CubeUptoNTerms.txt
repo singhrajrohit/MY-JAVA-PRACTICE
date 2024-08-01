@@ -1,0 +1,21 @@
+//Write a Java program to display the cube of the given number up to an integer.
+//Number is : 1 and cube of 1 is : 1                                               
+//Number is : 2 and cube of 2 is : 8                                               
+//Number is : 3 and cube of 3 is : 27                                              
+//Number is : 4 and cube of 4 is : 64
+
+import java.util.Scanner;
+
+public class CubeUptoNTerms {
+    public static void main (String args[]){
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the desired number to get cube upto that : ");
+        int n=sc.nextInt();
+        sc.close();
+        for(int i=1;i<=n;i++){
+            System.out.println("Number is : "+i+" Cube of number is : "+(int)(Math.pow(i, 3)));
+        }
+    }
+    
+}

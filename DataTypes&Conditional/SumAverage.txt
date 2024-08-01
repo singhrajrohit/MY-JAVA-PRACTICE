@@ -1,0 +1,30 @@
+// Write a program in Java to input 5 numbers from the keyboard and find their sum and average.
+
+import java.util.Scanner;
+
+public class SumAverage {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 5 numbers :");
+        //1st method
+        /*float v1 =sc.nextFloat();
+        float v2=sc.nextFloat();
+        float v3=sc.nextFloat();
+        float v4=sc.nextFloat();
+        float v5=sc.nextFloat();
+        sc.close();
+
+        System.out.println("Sum of numbers is : " +(v1+v2+v3+v4+v5));
+        System.out.println("Average of numers is : "+((v1+v2+v3+v4+v5)/5));*/
+
+        //2nd method
+        float sum=0.0f;
+        for(int i=1;i<=5;i++){
+            sum=sum+sc.nextFloat();
+        }
+        sc.close();
+        System.out.println("Sum of numbers is : "+sum);
+        System.out.println("Average of numbers is : "+sum/5);
+    }
+    
+}
