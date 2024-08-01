@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class findingVowels {
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter letter");
+        String letter=sc.next();
+        sc.close();
+        findingVowels obj=new findingVowels();
+
+        if(letter.length()>1){
+            System.out.println("Invalid input, Kindly provide a single charracter");
+        }
+        else if((letter.charAt(0)>=65 && letter.charAt(0)<=90)||(letter.charAt(0)>=97 && letter.charAt(0)<=122)){
+            System.out.println("Input letter is "+(obj.findVowel(letter)));
+        }
+        /*else if(letter.charAt(0)>=97 && letter.charAt(0)<=122){
+            System.out.println("Input letter is "+(obj.findVowel(letter)));
+        }*/
+        else{
+            System.out.println("Entered charracter is not a letter kindly provide uppercase or lowercase letter");
+        }
+    }
+
+    public String findVowel(String letter){
+        letter=letter.toLowerCase();
+        String result=new String();
+
+        switch (letter) {
+            case "a": result="vowels";break;
+            case "e": result="vowels";break;
+            case "i": result="vowels";break;
+            case "o": result="vowels";break;
+            case "u": result="vowels";break;
+        
+            default: result="consonant";break;
+
+        }
+        return result;
+    }
+}
