@@ -29,6 +29,7 @@ public class PolygonArea {
     private double areaPolygon(int numSide, double side){
         // if(numSide<3)
         //     throw new IllegalArgumentException("Invalid Polygon");
+        //formula 1
         double appothem=(side/(2*(Math.tan(Math.PI/numSide))));
 
         return (numSide*side*appothem)/2;
